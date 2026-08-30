@@ -1,0 +1,30 @@
+#Create a {gtsummary} table of descriptive statistics about your data (1 pt)
+
+#Fit a regression and present well-formatted results from the regression (1 pt)
+#The regression doesn’t have to be of any particular scientific interest, and you don’t have to interpret it in any particular way
+#You may use {gtsummary} or {broom} or both
+
+#Create a figure (1 pt)
+#It doesn’t need to look pretty; feel free to adapt some of the examples from class, which were as simple as hist(data$variable) and as complicated as the forest plot in the {broom} section
+#Feel free to look at some of the ggplot2 material from another course I taught
+
+#Write and use a function that does something with the data (1 pt)
+#It could be as simple as, for example, a new function to calculate a statistic for different variables, or a function that takes a dataframe and returns a summary table or fits a regression
+#If your function takes a variable name as an argument, you’ll want {{ }} – we’ll cover this in the functions section on day 2
+
+#Create and render a quarto document that includes at least:
+	#The table, regression results, and figure, with appropriate captions (1 pt)
+	#Inline R code in at least 2 places, 1 pulling a statistic from a table (i.e., using gtsummary::inline_text()) and 1 printing something else (like we did with the mean age in the example) (1 pt)
+	#Cross-references to a table and a figure at least once each (1 pt)
+	#A brief description of the data, including its source (1 pt)
+	#Read in a dataset and save a file (can be data, table, figure, etc.) Use the {here} package every time you refer to file paths (at least twice) (1 pt)
+
+#Commit and push your work to GitHub as you go (1 pt)
+
+#In a README file, include any notes necessary for us to easily reproduce your analysis (e.g., “Run script.R and then render document.qmd”) as well as some information about your data (1 pt)
+#We should be able to make a minor change to the underlying data, then re-run the analysis to see how the change affects the results
+#Also in the README, include a short AI note (1 pt)
+#Whether you used an AI assistant, roughly what for, and how you checked the results
+#A paragraph is plenty. “I did not use AI for this project” is a complete answer and receives full credit – this is about documenting how the analysis was made, not about how much AI you did or didn’t use
+#If you did use AI, also include a complete transcript of your conversation(s) with the AI assistant as a file in your repo or uploaded on Canvas
+#See the Using AI page for what’s expected, and for checks worth running before you submit

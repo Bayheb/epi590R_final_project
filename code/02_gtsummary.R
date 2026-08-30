@@ -1,9 +1,13 @@
 library(gtsummary)
 library(dplyr)
 
+#read in data object
+data <- readRDS(
+	file = here::here("data/raw/data.rds"))
+
 #add labeled variable for TVol
 data <- data |>
-	mutate(TVol_label = case_match(
+	mutate(TVol_label = recode_values(
 		TVol,
 		1 ~ "Low",
 		2 ~ "Medium",
@@ -25,3 +29,6 @@ table <- tbl_summary(
 	missing_text = "Missing"
 )
 table
+
+#save table as rds object
+new_save_rds(table, 'table.rds')
