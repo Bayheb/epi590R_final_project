@@ -1,8 +1,8 @@
 ---
 title: "EPI590R Final Project"
-format: 
-	html: 
-		theme: solar
+format:
+  html:
+    theme: solar
 ---
 
 ## Radical Prostatectomy Follow-Up Study
@@ -10,7 +10,9 @@ This data set contains 316 men who had undergone radical prostatectomy and recei
 
 ## Running Code
 
+@tbl-one shows the demographics, baseline, and prognostic factors of the study participants.
 ```{r}
+#| echo: false
 #| label: tbl-one
 #| tbl-cap: "Demographics, baseline and prognostic factors"
 library(here)
@@ -19,15 +21,18 @@ table <- readRDS("output/table.rds")
 table
 ```
 
-
+@tbl-two displays the relationship between age, prostate volume and tumor volume with time to recurrence (in months).
 ```{r}
+#| echo: false
 #| label: tbl-two
 #| tbl-cap: "Time to Recurrence MLR" 
 regression <- readRDS("output/regression_table.rds")
 regression
 ```
 
+@tbl-three shows the distribution of time to biochemical cancer recurrence for all study participants. 
 ```{r}
+#| echo: false
 #| label: tbl-three
 #| tbl-cap: "Time to Recurrence Distribution"
 library(knitr)
