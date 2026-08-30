@@ -13,8 +13,13 @@ regression_table <- tbl_regression(
 regression_table
 new_save_rds(regression_table, 'regression_table.rds')
 
-#histogram
-hist <- hist(data$TimeToRecurrence, main = "Histogram #1",
-														xlab = "Time to Recurrence (Months)")
-new_save_rds(hist, 'hist.rds')
+#make histogram
+library(ggplot2)
+hist_gg <- ggplot(data, aes(x = TimeToRecurrence)) +
+	geom_histogram(binwidth = 2, fill = "blue", color = "white") +
+	labs(x = "Time to Recurrence", y = "Count")
+hist_gg
+ggsave("output/hist_gg.png", width = 6, height = 4, dpi = 300)
+
+
 

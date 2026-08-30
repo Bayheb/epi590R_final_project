@@ -1,26 +1,36 @@
 ---
 title: "EPI590R Final Project"
-format: html
-editor: visual
+format: 
+	html: 
+		theme: solar
 ---
 
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+## Radical Prostatectomy Follow-Up Study
+This data set contains 316 men who had undergone radical prostatectomy and received transfusion during or within 30 days of the surgical procedure and had available PSA follow-up data. The main exposure of interest was RBC storage duration group. A number of demographic, baseline and prognostic factors were also collected. The outcome was time to biochemical cancer recurrence. The dataset is cleaned and complete. There are no outliers or data problems. These are data from a study by Cata et al. “Blood Storage Duration and Biochemical Recurrence of Cancer after Radical Prostatectomy”. Mayo Clin Proc 2011; 86(2): 120-127.
 
 ## Running Code
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
 ```{r}
-1 + 1
+#| label: tbl-one
+#| tbl-cap: "Demographics, baseline and prognostic factors"
+library(here)
+here::i_am("Final Report.qmd")
+table <- readRDS("output/table.rds")
+table
 ```
 
-You can add options to executable code like this
 
 ```{r}
-#| echo: false
-2 * 2
+#| label: tbl-two
+#| tbl-cap: "Time to Recurrence MLR" 
+regression <- readRDS("output/regression_table.rds")
+regression
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+```{r}
+#| label: tbl-three
+#| tbl-cap: "Time to Recurrence Distribution"
+library(knitr)
+knitr::include_graphics("output/hist_gg.png")
+```
+
