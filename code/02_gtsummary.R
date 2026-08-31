@@ -15,7 +15,7 @@ data <- data |>
 	))
 
 #create tbl_summary
-table <- tbl_summary(
+table_one <- tbl_summary(
 	data,
 	include = c(
 	Age, AA, FamHx, PVol, TVol_label
@@ -28,7 +28,7 @@ table <- tbl_summary(
 	),
 	missing_text = "Missing"
 )
-table
+table_one
 
 #save table as rds object
-new_save_rds(table, 'table.rds')
+new_save_rds(table_one, 'table_one.rds')

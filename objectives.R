@@ -14,14 +14,16 @@
 
 #Create and render a quarto document that includes at least:
 	#The table, regression results, and figure, with appropriate captions (1 pt)
-	#Inline R code in at least 2 places, 1 pulling a statistic from a table (i.e., using gtsummary::inline_text()) and 1 printing something else (like we did with the mean age in the example) (1 pt)
+	#Inline R code in at least 2 places, 1 pulling a statistic from a table (i.e., using gtsummary::inline_text())
+	#and 1 printing something else (like we did with the mean age in the example) (1 pt)
 	#Cross-references to a table and a figure at least once each (1 pt)
 	#A brief description of the data, including its source (1 pt)
 	#Read in a dataset and save a file (can be data, table, figure, etc.) Use the {here} package every time you refer to file paths (at least twice) (1 pt)
 
 #Commit and push your work to GitHub as you go (1 pt)
 
-#In a README file, include any notes necessary for us to easily reproduce your analysis (e.g., “Run script.R and then render document.qmd”) as well as some information about your data (1 pt)
+#In a README file, include any notes necessary for us to easily reproduce your analysis
+#(e.g., “Run script.R and then render document.qmd”) as well as some information about your data (1 pt)
 #We should be able to make a minor change to the underlying data, then re-run the analysis to see how the change affects the results
 #Also in the README, include a short AI note (1 pt)
 #Whether you used an AI assistant, roughly what for, and how you checked the results
