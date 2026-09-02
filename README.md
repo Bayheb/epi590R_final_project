@@ -8,7 +8,7 @@ There are no outliers or data problems. These are data from a study by Cata et a
 “Blood Storage Duration and Biochemical Recurrence of Cancer after Radical Prostatectomy”. 
 Mayo Clin Proc 2011; 86(2): 120-127.
 
-*To produce the html, render Final Report.qmd*
+**To produce the html, render Final Report.qmd**
 
 If changes to the data are needed, bring the data.rds object into the working environment 
 using readRDS(), make and save your changes, and save the updated data as a .rds object 

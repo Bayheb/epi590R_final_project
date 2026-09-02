@@ -21,7 +21,7 @@ data <- readRDS("output/data.rds")
 median_pvol <- median(data$PVol, na.rm = TRUE)
 median_pvol
 ```
-@tbl-one shows the demographics, baseline, and prognostic factors of the study participants. The mean age of participants was `r gtsummary::inline_text(table_one, variable = "Age", column = "stat_0")` years old. The mean prostate volume was `r median_pvol`.
+@tbl-one shows the demographics, baseline, and prognostic factors of the study participants. The mean age of participants was `r gtsummary::inline_text(table_one, variable = "Age", column = "stat_0")` years old. The mean prostate volume was `r median_pvol` mL.
 
 ```{r}
 #| echo: false
