@@ -17,8 +17,10 @@ library(here)
 here::i_am("Final Report.qmd")
 table_one <- readRDS("output/table_one.rds")
 table_one
+median_pvol <- median(data$PVol, na.rm = TRUE)
+median_pvol
 ```
-@tbl-one shows the demographics, baseline, and prognostic factors of the study participants. The mean age of participants was `r gtsummary::inline_text(table_one, variable = "Age", column = "stat_0")`. Most study participants had an extensive tumor volume `r gtsummary::inline_text(table_one, variable = "TVol_label", column = "stat_0")`.
+@tbl-one shows the demographics, baseline, and prognostic factors of the study participants. The mean age of participants was `r gtsummary::inline_text(table_one, variable = "Age", column = "stat_0")` years old. The mean prostate volume was `r median_pvol`.
 
 ```{r}
 #| echo: false
