@@ -17,6 +17,7 @@ library(here)
 here::i_am("Final Report.qmd")
 table_one <- readRDS("output/table_one.rds")
 table_one
+data <- readRDS("output/data.rds")
 median_pvol <- median(data$PVol, na.rm = TRUE)
 median_pvol
 ```
